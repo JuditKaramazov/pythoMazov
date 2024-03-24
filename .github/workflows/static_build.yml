@@ -24,8 +24,8 @@ jobs:
 
       - name: Run build script
         run: |
-          chmod +x ./pythomazov/remote_build.sh
-          ./pythomazov/remote_build.sh
+          chmod +x ./remote_build.sh
+          ./remote_build.sh
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
