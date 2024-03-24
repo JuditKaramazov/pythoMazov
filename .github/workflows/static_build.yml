@@ -1,0 +1,36 @@
+name: Static Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    if: github.repository == 'JuditKaramazov/pythoMazov'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run build script
+        run: |
+          chmod +x ./pythomazov/remote_build.sh
+          ./pythomazov/remote_build.sh
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update static build
+          commit_user_name: Judit Karamazov [GitHub Actions]
+          commit_user_email: j.lazaromoyano7@gmail.com
+          commit_author: Judit Karamazov <j.lazaromoyano7@gmail.com>
