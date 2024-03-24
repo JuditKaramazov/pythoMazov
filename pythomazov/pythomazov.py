@@ -5,7 +5,7 @@ from pythomazov.pages.index import index
 from pythomazov.pages.courses import courses
 from pythomazov.pages.cheatsheets import cheatsheets
 from pythomazov.pages.challenges import challenges
-from pythomazov.api.api import repo
+from pythomazov.api.api import featured, repo
 
 app = rx.App(
     stylesheets=styles.STYLESHEETS,
@@ -25,3 +25,4 @@ gtag('config', '{const.GOOGLE_TAG}');
 )
 
 app.api.add_api_route("/repo", repo)
+app.api.add_api_route("/featured", featured)
