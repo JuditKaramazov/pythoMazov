@@ -1,0 +1,7 @@
+::selection {
+  color: #43a699;
+}
+
+:root, .light, .light-theme {
+--color-page-background: #161a1b !important;
+}
