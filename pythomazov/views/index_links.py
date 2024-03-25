@@ -6,9 +6,10 @@ from pythomazov.routes import Route
 from pythomazov.components.link_button import link_button
 from pythomazov.components.title import title
 from pythomazov.styles.styles import Size, Color
+from pythomazov.state.PageState import PageState
 
 
-def index_links(featured: list[Featured]) -> rx.Component:
+def index_links() -> rx.Component:
     return rx.chakra.vstack(
         title("Starter Kit"),
         link_button(
@@ -87,12 +88,12 @@ def index_links(featured: list[Featured]) -> rx.Component:
         ),
 
         rx.cond(
-            featured,
+            PageState.featured_info,
             rx.chakra.vstack(
                 title("Based on"),
                 rx.chakra.responsive_grid(
                     rx.foreach(
-                        featured,
+                        PageState.featured_info,
                         featured_link
                     ),
                     columns=[1],
@@ -105,4 +106,5 @@ def index_links(featured: list[Featured]) -> rx.Component:
         ),
         width="100%",
         spacing=Size.DEFAULT.value,
+        on_mount=PageState.featured_links
     )
