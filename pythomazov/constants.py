@@ -2,7 +2,7 @@
 GOOGLE_TAG = "GTM-TGWFR79L"
 
 # Header
-GITHUB_URL = "https://github.com/JuditKaramazovv"
+GITHUB_URL = "https://github.com/JuditKaramazov"
 LINKEDIN_URL = "https://www.linkedin.com/in/juditlazaromoyano/"
 TWITTER_X_URL = "https://twitter.com/V_Karamazov"
 
