@@ -8,15 +8,13 @@ from pythomazov.views.header import header
 from pythomazov.views.index_links import index_links
 from pythomazov.views.sponsors import sponsors
 from pythomazov.styles.styles import Size
-from pythomazov.state.PageState import PageState
 
 
 @rx.page(
     title=utils.index_title,
     description=utils.index_description,
     image=utils.preview,
-    meta=utils.index_meta,
-    on_load=[PageState.featured_links]
+    meta=utils.index_meta
 )
 def index() -> rx.Component:
     return rx.chakra.box(
@@ -25,7 +23,7 @@ def index() -> rx.Component:
         rx.chakra.center(
             rx.chakra.vstack(
                 header(Route.INDEX.value),
-                index_links(PageState.featured_info),
+                index_links(),
                 sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
