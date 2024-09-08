@@ -7,6 +7,7 @@ LINKEDIN_URL = "https://www.linkedin.com/in/juditlazaromoyano/"
 TWITTER_X_URL = "https://twitter.com/V_Karamazov"
 
 # Courses & Material
+JAVASCRIPT_COURSE_URL = "https://javascript-ed.vercel.app/"
 PYTHON_INTRODUCTION_COURSE_URL = "https://github.com/JuditKaramazov/InsightsFromJuniorToFutureSeniors/blob/main/content/03-Courses/01-Python/README.md"
 GIT_COURSE_URL = "https://github.com/JuditKaramazov/InsightsFromJuniorToFutureSeniors/blob/main/content/03-Courses/02-Git-GitHub/README.md"
 CERTIFICATES_URL = "https://github.com/JuditKaramazov/InsightsFromJuniorToFutureSeniors/blob/main/content/04-Certificates/README.md"

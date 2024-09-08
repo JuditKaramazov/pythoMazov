@@ -9,6 +9,12 @@ def courses_links() -> rx.Component:
     return rx.chakra.vstack(
         title("Kara's (free) courses"),
         link_button(
+            "JavaScripted",
+            " A collection of JavaScript notes, templates, and snippets",
+            "/icons/javascript.svg",
+            const.JAVASCRIPT_COURSE_URL
+        ),
+        link_button(
             "Python: Introduction",
             "Level 1: Foundations, front-end, back-end, and testing",
             "/icons/python.svg",
